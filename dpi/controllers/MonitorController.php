@@ -14,6 +14,7 @@ class MonitorController extends Controller
     public function actionIndex() {
         $json = file_get_contents('php://input');
         $json= str_replace("id", '"id"', $json);
+        $json="{".$json."}";
         $post= (new \yii\helpers\BaseJson)->decode($json);
         //var_dump($post);die;
         //echo \Yii::getAlias('@dpi').DIRECTORY_SEPARATOR.'info'.DIRECTORY_SEPARATOR;die;
