@@ -15,8 +15,8 @@ class MonitorController extends Controller
         echo json_encode([
             'code' => 0,
             'data' => [
-                'deviceToken' => "a5d2bfd7b9d3113743a6dbaa09afc51c",
-                'time' => date("Y-m-d h:i:s")
+                'deviceToken' => "ac2810f08a6064955c3d8247ff985322d6f34a1fd1eb792b19ac93ce2631f9d7",
+                'time' => gmdate('Y-m-d\TH:i:s.123\Z')
             ]
         ]);
         return;
