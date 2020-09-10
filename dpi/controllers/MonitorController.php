@@ -30,7 +30,7 @@ class MonitorController extends Controller
         }
 
         ini_set("date.timezone", "Etc/GMT");
-        $date = gmdate('Y-m-d\TH:i:s.000\Z') ;
+        $date = gmdate('Y-m-d\TH:i:s.123\Z') ;
         $token=  md5($post['id']);
 
         $boxIns= new ScadaBox();
