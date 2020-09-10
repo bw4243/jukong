@@ -12,6 +12,15 @@ class MonitorController extends Controller
     public $enableCsrfValidation = false;
 
     public function actionIndex() {
+        echo json_encode([
+            'code' => 0,
+            'data' => [
+                'deviceToken' => "a5d2bfd7b9d3113743a6dbaa09afc51c",
+                'time' => date("Y-m-d h:i:s")
+            ]
+        ]);
+        return;
+
         $json = file_get_contents('php://input');
         $json= str_replace("id", '"id"', $json);
         $json= str_replace("=", ":", $json);
